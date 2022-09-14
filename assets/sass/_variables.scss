@@ -1,0 +1,23 @@
+$orange: #ff9900;
+$primary: #f85a47;
+$text: #333333;
+$text2: #31353b;
+$gray: #718087;
+$blue: #f1ffff;
+$font: "Manrope", sans-serif;
+$black: #000;
+$white: #fff;
+$purple: #bdccff;
+$fill-icon-1: #9672ff;
+$fill-icon-2: #4ddffd;
+$fill-icon-3: #f2b8ec;
+body {
+	--fill-icon-1: #{$fill-icon-1};
+	--fill-icon-2: #{$fill-icon-2};
+	--fill-icon-3: #{$fill-icon-3};
+	font-size: 1.6rem;
+	font-family: $font;
+	@media screen and (max-width: 768px) {
+		padding: 0 1.5rem;
+	}
+}

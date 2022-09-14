@@ -1,0 +1,11 @@
+::selection {
+	background-color: $primary;
+	color: $white;
+}
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 120rem;
+		width: 100%;
+		margin: 0 auto;
+	}
+}

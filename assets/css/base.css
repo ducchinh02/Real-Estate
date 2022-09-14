@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	color: unset;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+input,
+button {
+	outline: none;
+	border: none;
+}
+
+ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+.gap-y-3 {
+	gap: 3rem 0;
+}
+.gap-x-3 {
+	gap: 0 3rem;
+}
+.gap-3 {
+	gap: 3rem;
+}
+.gap-y-5 {
+	gap: 5rem 0;
+}
+.gap-x-5 {
+	gap: 0 5rem;
+}
+.gap-5 {
+	gap: 5rem;
+}
+@media screen and (min-width: 992px) {
+	.col-lg-12-5 {
+		flex: 0 0 auto;
+		width: 20%;
+	}
+}

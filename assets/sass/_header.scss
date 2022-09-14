@@ -1,0 +1,217 @@
+header {
+	position: relative;
+	&::before {
+		content: "";
+		width: 40%;
+		background-color: $purple;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		z-index: -1;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	.header-top {
+		padding-top: 3.6rem;
+		padding-bottom: 11.7rem;
+		@media screen and (max-width: 768px) {
+			& {
+				padding-bottom: 0;
+			}
+		}
+		.logo {
+			font-weight: 800;
+			font-size: 2.3rem;
+			line-height: 3.1rem;
+		}
+
+		nav {
+			.menu {
+				gap: 4.6rem;
+				.menu-item {
+					font-weight: 700;
+					font-size: 1.6rem;
+					line-height: 1.7rem;
+					position: relative;
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -0.5rem;
+						left: 0;
+						height: 0.2rem;
+						background-color: $black;
+						width: 0;
+						@include trans_300;
+					}
+					&:hover::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.menu-bar {
+			width: 3.5rem;
+			height: 2rem;
+			position: relative;
+			span {
+				height: 0.3rem;
+				width: 100%;
+				background-color: $text2;
+				border-radius: 0.5rem;
+				@include trans_300;
+			}
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: 50%;
+				background-color: $text2;
+				height: 0.3rem;
+				border-radius: 0.5rem;
+				@include trans_300;
+			}
+			&::before {
+				top: 0;
+				left: 0;
+				transform-origin: top right;
+			}
+			&::after {
+				bottom: -0.1rem;
+				transform-origin: bottom right;
+				right: 0;
+			}
+			&.active {
+				// span {
+				// 	transform: translateX(-100%);
+				// 	-webkit-transform: translateX(-100%);
+				// 	opacity: 0;
+				// 	pointer-events: none;
+				// }
+				&::before,
+				&::after {
+					width: 1.5rem;
+				}
+				&::before {
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					top: unset;
+					left: unset;
+					right: 0;
+				}
+				&::after {
+					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					bottom: unset;
+					// left: 0;
+				}
+			}
+		}
+	}
+	.header-content {
+		.content-text {
+			padding-top: 4rem;
+			&-title {
+				color: $orange;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 2.2rem;
+				line-height: 2.9rem;
+				@media screen and (max-width: 768px) {
+					font-size: 1.8rem;
+				}
+			}
+			&-heading {
+				font-weight: 800;
+				font-size: 5.4rem;
+				line-height: 7.3rem;
+				padding: 2.4rem 8.3rem 2.4rem 0;
+				@media screen and (max-width: 768px) {
+					padding: 2.4rem 0;
+					font-size: 3rem;
+					line-height: 3.6rem;
+				}
+			}
+			&-desc {
+				font-size: 1.7rem;
+				line-height: 2.3rem;
+				letter-spacing: 0.01em;
+				@include font-light;
+				color: $text2;
+				padding-right: 6.8rem;
+				@media screen and (max-width: 768px) {
+					padding-right: 0;
+				}
+			}
+			form {
+				position: relative;
+				.form-zipcode {
+					margin-top: 4.8rem;
+					padding: 3rem;
+					background-color: $white;
+					border: 0.1rem solid #dadada;
+					box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03),
+						0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778),
+						0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222),
+						0px 20px 13px rgba(0, 0, 0, 0.015),
+						0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778),
+						0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+					input {
+						flex: 1;
+						padding-right: 10rem;
+						@include font-bold;
+						@media screen and (max-width: 991px) {
+							padding-right: 0;
+						}
+					}
+				}
+				button {
+					position: absolute;
+					height: 100%;
+					background-color: $primary;
+					padding: 3rem;
+					right: 0;
+					top: 0;
+					@include transform(calc(100% - 0.1rem), 0);
+					color: $white;
+					font-size: 1.7rem;
+					line-height: 2.3rem;
+					letter-spacing: 0.01em;
+					@media screen and (max-width: 991px) {
+						position: relative;
+						width: 100%;
+						@include transform(0, 0);
+					}
+					@media screen and (max-width: 768px) {
+						padding: 2rem 3rem;
+					}
+				}
+			}
+		}
+		.content-image {
+			img {
+				width: 100%;
+				max-width: unset;
+				height: 57.3rem;
+			}
+		}
+		.partners {
+			&-heading {
+				@include font-light;
+				color: $text2;
+				font-size: 1.7rem;
+				line-height: 2.3rem;
+				margin-bottom: 2.7rem;
+				letter-spacing: 0.01em;
+				@media screen and (max-width: 768px) {
+					text-align: center;
+				}
+			}
+			@include transform(0, -100%);
+			@media screen and (max-width: 1200px) {
+				@include transform(0, 3rem);
+			}
+		}
+	}
+}
